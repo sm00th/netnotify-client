@@ -1,0 +1,29 @@
+Introduction
+------------
+Netnotify-Client is a client for netnotify-daemon, part of netnotify project.
+After connecting to netnotify-daemon it will recieve new notifications and
+forward them to your local notification daemon through libnotify.
+
+Requirements
+------------
+ - glib-2.0
+ - gio-2.0
+ - libnotify
+You will also need autotools installed if you got netnotify-daemon from git
+repository.
+
+Installation
+------------
+Netnotify-Client uses autotools, if you got it from git repository, you would
+need to run autogen.sh to prepare configure script, after that the installation
+procedure is standard:
+ $ ./configure
+ $ make
+ $ sudo make install
+
+Usage
+-----
+Once itstalled netnotify-client can be started with netnotify-daemon's address
+and port as arguments.
+
+netnotify-client <host> <port>
